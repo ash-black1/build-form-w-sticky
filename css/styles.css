@@ -1,0 +1,157 @@
+:root {
+    --red: #dc413e;
+    --white: #fff;
+    --black: #000;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inner-container,
+section {
+    padding: 1rem;
+}
+
+/* *******************Typography******************* */
+h2,
+h3 {
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* *******************Header******************* */
+/* To Do: Create a sticky header that will scroll until the nav links hit the top of the viewport  */
+header {
+    background-color: var(--black);
+    position: sticky;
+    top: 0;
+}
+
+header svg {
+    width: 4.6875rem;
+    fill: var(--white);
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 0 0.5rem;
+}
+
+.menu a:hover,
+.menu a:active {
+    color: var(--red);
+}
+
+.menu li {
+    line-height: 2.1875rem;
+    text-align: center;
+    flex: 1 0 50%;
+}
+
+/* *******************Form******************* */
+fieldset {
+    border: none;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.865rem;
+}
+
+form div {
+    margin-bottom: 1.5rem;
+}
+
+input, 
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #e8e8e8;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 18.75rem;
+}
+
+/* To Do: Resize the checkbox to 24 by 24px and place the label on the right */
+input[type=checkbox] {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.check-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input[type=submit] {
+    background-color: var(--white);
+    border: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    transition: padding-left 1s ease;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    color: var(--red);
+    padding-left: 20px;
+}
+
+/* Media query for the header links only */
+@media only screen and (min-width: 450px) {
+    .menu li {
+        flex: 0 0 auto; /* Auto is the keyword for the default, content width - resets the item back to its original content width */
+    }
+}
+
+@media only screen and (min-width: 1260px) {
+    .inner-container,
+    section {
+        max-width: 1200px;
+        padding: 1rem 0;
+        margin: 0 auto;
+    }
+
+    /* To Do: On the wider screen adjust and layout the form to 2 equal columns with a gutter space between them - see screenshot */
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    
+    input {
+        width: 100%;
+        flex: 1;
+        margin-right: 10px;
+     }
+
+
+
+} 
